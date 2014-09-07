@@ -25,38 +25,17 @@ public class SubStringDiff {
 
     public static int getDiff(final String str1,
                               final String str2, final int numDiff) {
-        if (str1.length() <= numDiff) {
-            return str1.length();
-        }
-
         int n = str1.length();
-        Meta dp[][] = new Meta[n][n];
+        int count[] = new int[n];
         for(int i = 0; i < n; ++i) {
-            dp[0][i] = str1.charAt(0) == str2.charAt(i) ? new Meta(1, 0) : new Meta(1, 1);
-        }
-        for(int i = 1; i < n; ++i) {
-            dp[i][0] = str1.charAt(i) == str2.charAt(0) ? new Meta(1, 0) : new Meta(1, 1);
+            count[i] = str1[i] == str2[i] ? 1 : 0;
         }
 
-        for(int i = 1; i < n; ++i) {
-            for(int j =1; j < n; ++j) {
-               if(str1.charAt(i) == str2.charAt(j)) {
-                   Meta temp = new Meta(dp[i - 1][j - 1]);
-                   temp.length++;
-                   dp[i][j] = temp;
-               } else {
-                    if(dp[i - 1][j - 1].diff < numDiff) {
-                        Meta temp = new Meta(dp[i - 1][j - 1]);
-                        temp.length++;
-                        temp.diff++;
-                        dp[i][j] = temp;
-                    } else {
+        for(int i = 0; i < n; ++i) {
+            for(int j = 0; j < n; ++j) {
 
-                    }
-               }
             }
         }
-
 
 
 
