@@ -23,7 +23,7 @@ class Meta {
 public class SubStringDiff {
 
 
-    public static int getDiff(final String str1,
+ /*   public static int getDiff(final String str1,
                               final String str2, final int numDiff) {
         int n = str1.length();
         int count[] = new int[n];
@@ -35,14 +35,14 @@ public class SubStringDiff {
             for(int j = 0; j < n; ++j) {
 
             }
-        }
+        }*/
 
 
 
-    }
+  //  }
 
     public static void main(String[] Argv) {
         System.out.println("Running");
-        System.out.println(getDiff("tabriz", "torino", 2));
+        //System.out.println(getDiff("tabriz", "torino", 2));
     }
 }
